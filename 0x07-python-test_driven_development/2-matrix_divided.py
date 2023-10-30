@@ -1,3 +1,5 @@
+2-matrix_divided.py
+
 #!/usr/bin/python3
 # 2-matrix_divided.py
 """Defines a matrix division function."""
@@ -34,4 +36,3 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
-
