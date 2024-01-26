@@ -2,14 +2,12 @@
 
 """ 10-model_state_my_get module """
 
-if __name__ == "__main__":
+import sys
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 
-    from sqlalchemy import create_engine
-    from sqlalchemy.ext.declarative import declarative_base
-    from sqlalchemy.orm import sessionmaker
-    import sys
-    from model_state import Base, State
-
+def main():
     inp = sys.argv
     if len(inp) < 5 or ";" in inp[4]:
         exit(1)
@@ -30,3 +28,6 @@ if __name__ == "__main__":
         print(my_query[0].id)
 
     session.close()
+
+if __name__ == "__main__":
+    main()
